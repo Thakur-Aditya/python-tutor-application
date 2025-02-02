@@ -107,11 +107,14 @@ function Playground() {
     setOutput("");
 
     try {
-      const response = await axios.post("http://localhost:3001/api/execute", {
-        code,
-        inputs,
-        tutorPersonality: getTutorPersonality(),
-      });
+      const response = await axios.post(
+        "https://python-tutor-application-2.onrender.com/api/execute",
+        {
+          code,
+          inputs,
+          tutorPersonality: getTutorPersonality(),
+        }
+      );
 
       setOutput(response.data.output.output || "");
       setConversation((prev) => [...prev, { role: "user", content: code }]);
@@ -131,17 +134,20 @@ function Playground() {
   const handleCodeAnalysis = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3001/api/analyze", {
-        code,
-        messages: [
-          { role: "system", content: getTutorPersonality() },
-          {
-            role: "user",
-            content: `Here's my Python code:\n${code}\nCan you help me understand what it does and if there are any issues?`,
-          },
-        ],
-        apiKey,
-      });
+      const response = await axios.post(
+        "https://python-tutor-application-2.onrender.com/api/analyze",
+        {
+          code,
+          messages: [
+            { role: "system", content: getTutorPersonality() },
+            {
+              role: "user",
+              content: `Here's my Python code:\n${code}\nCan you help me understand what it does and if there are any issues?`,
+            },
+          ],
+          apiKey,
+        }
+      );
       console.log(response);
 
       const aiResponse = response.data.analysis;

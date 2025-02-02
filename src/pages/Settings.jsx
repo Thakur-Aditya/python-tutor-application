@@ -31,9 +31,12 @@ function Settings() {
   }, []);
 
   const handleSave = async () => {
-    const response = await axios.post("http://localhost:3001/api/key", {
-      key,
-    });
+    const response = await axios.post(
+      "https://python-tutor-application-2.onrender.com/api/key",
+      {
+        key,
+      }
+    );
 
     console.log(response);
     alert(response.data.message);
@@ -43,7 +46,9 @@ function Settings() {
     setTimeout(() => setSaved(false), 3000);
   };
   const handleReset = async () => {
-    const response = await axios.get("http://localhost:3001/api/reset");
+    const response = await axios.get(
+      "https://python-tutor-application-2.onrender.com/api/reset"
+    );
 
     console.log(response);
     alert(response.data.message);
