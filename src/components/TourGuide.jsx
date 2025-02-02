@@ -62,7 +62,7 @@ function TourGuide() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const hasSeenTour = localStorage.getItem("hasSeenour");
+    const hasSeenTour = localStorage.getItem("hasSeenTour");
     if (hasSeenTour) {
       setIsOpen(false);
     }

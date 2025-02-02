@@ -28,7 +28,7 @@ function VideoTutorial() {
               boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
             }}
           >
-            <source src="/tourGuide2.mp4" />
+            <source src="/pythonTutorialVideo.mp4" />
             Your browser does not support the video tag.
           </video>
         </Paper>
