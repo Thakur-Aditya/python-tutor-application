@@ -20,17 +20,19 @@ function VideoTutorial() {
             overflow: "hidden",
           }}
         >
-          <video
-            controls
+          <iframe
             width="100%"
+            height="600"
+            src="https://www.youtube.com/embed/iRdXzU33ZQM"
+            title="Python Tutorial Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
             style={{
               borderRadius: "8px",
               boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
             }}
-          >
-            <source src="/pythonTutorialVideo.mp4" />
-            Your browser does not support the video tag.
-          </video>
+          />
         </Paper>
       </Box>
     </Container>
