@@ -149,6 +149,7 @@ function Playground() {
         }
       );
       console.log(response);
+      console.log("I am working")
 
       const aiResponse = response.data.analysis;
       console.log(aiResponse);
