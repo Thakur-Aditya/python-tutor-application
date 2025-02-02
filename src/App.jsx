@@ -14,10 +14,10 @@ function App() {
       <Navbar />
       <TourGuide />
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/playground" element={<Playground />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/tutorial" element={<VideoTutorial />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </div>
   );
